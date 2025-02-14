@@ -6,4 +6,3 @@ resource "aws_subnet" "main" {
     Name = "Main"
   }
 }
-
