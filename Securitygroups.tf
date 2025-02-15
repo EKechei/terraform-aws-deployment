@@ -4,7 +4,7 @@ resource "aws_security_group" "webSg" {
   vpc_id = aws_vpc.main.id
 
   ingress {
-    description = "HTTP from VPC"
+    description = "HTTP traffic"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -23,3 +23,23 @@ resource "aws_security_group" "webSg" {
   }
 }
 
+
+
+resource "aws_security_group" "albSg" {
+  name = "AlbSg"
+  vpc_id = aws_vpc.main.id
+
+
+ ingress {
+    description = "HTTP traffic"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+    tags= {
+      Name = "AlbSg"
+    }
+
+}
