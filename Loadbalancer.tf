@@ -14,7 +14,7 @@ resource "aws_lb_target_group" "mytg" {
   name = "myTG"
   vpc_id = aws_vpc.main.id
   port = "80"
-  protocol = "Http"
+  protocol = "HTTP"
 
   health_check {
     path = "/"
