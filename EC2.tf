@@ -5,6 +5,7 @@ resource "aws_instance" "Webserver1" {
   vpc_security_group_ids = [aws_security_group.webSg.id]
   subnet_id = aws_subnet.public1.id
   user_data = base64encode(file("userdata.sh"))
+  
 
   tags = {
     Name= "Webserver1"

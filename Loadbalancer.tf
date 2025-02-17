@@ -25,13 +25,13 @@ resource "aws_lb_target_group" "mytg" {
 
 resource "aws_lb_target_group_attachment" "attachment1" {
   target_group_arn = aws_lb_target_group.mytg.arn
-  target_id = aws_lb_target_group.mytg.id
+  target_id = aws_instance.Webserver1.id
   port = 80
 }
 
 resource "aws_lb_target_group_attachment" "attachment2" {
   target_group_arn = aws_lb_target_group.mytg.arn
-  target_id = aws_lb_target_group.mytg.id
+  target_id = aws_instance.Webserver2.id
   port = 80
 }
 

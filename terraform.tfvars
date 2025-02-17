@@ -1,4 +1,4 @@
-ami_value = "ami-0866a3c8686eaeeba"
+ami_value = "ami-04b4f1a9cf54c11d0"
 instance_type_value = "t2.micro"
 aws_vpc = "10.0.0.0/16"
 aws_subnet1 = "10.0.0.0/24"
